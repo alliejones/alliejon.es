@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Knitting machine hacking: flashing the Arduino firmware"
-description: ""
+date: 2015-01-25 00:00:00 -0500
 category:
 tags: ["knitting machine", "knitting"]
 from_jekyll: true
 ---
 
-_Wondering what this is about? See [the introduction](/blog/2014/12/02/adventures-in-knitting-machine-hacking/) to my knitting machine hacking adventures._
+_Wondering what this is about? See <Link to="/blog/2014/12/02/adventures-in-knitting-machine-hacking/">the introduction</Link> to my knitting machine hacking adventures._
 
 Successfully flashing the firmware on my Arduino so I could use my AYAB shield took a bit of fiddling, especially because I'm running OSX instead of Linux.
 
@@ -28,8 +28,10 @@ I did this on OSX Yosemite (10.10) but my guess is it would work fine on any rel
 
 3. **Find and edit `avrdude.conf` or download a corrected version**
    The `avrdude` config provided by AYAB won't work when used on a computer without parallel ports (which I'm pretty sure means any modern Mac).
-   <br/><br/>I put the [modified version I used](https://gist.github.com/alliejones/022b9d3cc422bdc8bf36) on Github if you'd like to download it.
-   <br/><br/>Alternately, to edit it yourself, find the config file in the repo at `/plugins/ayab_plugin/firmware/avrdude.conf`. Do a search and replace on this file, replacing any instances of `par;` with `serbb;`. (Thanks to [this Arduino forum post](http://forum.arduino.cc/index.php?topic=49229.0) for this fix.)
+
+   I put the [modified version I used](https://gist.github.com/alliejones/022b9d3cc422bdc8bf36) on Github if you'd like to download it.
+
+   Alternately, to edit it yourself, find the config file in the repo at `/plugins/ayab_plugin/firmware/avrdude.conf`. Do a search and replace on this file, replacing any instances of `par;` with `serbb;`. (Thanks to [this Arduino forum post](http://forum.arduino.cc/index.php?topic=49229.0) for this fix.)
 
 4. **Find `firmware.hex` in the AYAB repo**  
    The path relative to the AYAB repo root directory is `/software/python/ayab/plugins/ayab_plugin/firmware/[KNITTING MACHINE MODEL]/[ARDUINO TYPE]/firmware.hex`. You'll need to pick the directories that match your knitting machine and Arudino. There are different files for the different combinations.
@@ -40,7 +42,7 @@ I did this on OSX Yosemite (10.10) but my guess is it would work fine on any rel
 
 6. **Actually flash your firmware!**  
    Now you should have collected all of the information you'll need. Here's the avrdude command to run: `avrdude -v -p atmega328p -C "[PATH TO AVRDUDE.CONF]" -c arduino -P [ARDUINO SERIAL PORT] -b115200 -D -Uflash:w:"[PATH TO FIRMWARE.HEX]":i`
-   <br/><br/>A note: I have an Arduino Uno, and you _may_ have to change the `-p atmega328p` too if you're using an Arduino Mega, but I'm not sure.
+   A note: I have an Arduino Uno, and you _may_ have to change the `-p atmega328p` too if you're using an Arduino Mega, but I'm not sure.
 
 So if all goes well, avrdude should do its thing and flash the firmware, and you're ready to install your AYAB shield, yay!
 

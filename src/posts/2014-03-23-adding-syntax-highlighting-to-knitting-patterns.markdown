@@ -17,7 +17,7 @@ If you're not familiar with knitting patterns, they use a semi-standardized set 
 
 For example, here's the top of a sock I'm working on. The top of the cuff looks different than the rest, which is the result of a different pattern of stitches. (There are two kinds of stitches in knitting, knit and purl, though they are really the same stitch flipped 180 degrees&mdash;the back of a knit stitch looks like a purl stitch, and vice versa.)
 
-<img src="/public/img/blog/knit-sock.jpg" alt="knit sock stitches">
+![knit sock stitches](../images/knit-sock.jpg)
 
 The knitting pattern abbreviation for the cuff (at the top of the photo) is this:
 
@@ -37,7 +37,7 @@ Almost the same, but with a different ratio of knits and purls, which makes a di
 
 For another example, here's a closeup of a hat I made. Same two stitches, but in more complicated patterns:
 
-<img src="/public/img/blog/knit-hat.jpg" alt="knit hat stitches">
+![knit hat stitches](../images/knit-hat.jpg)
 
 A section of that hat's texture (the diagonal stripes) would be transcribed like this:
 

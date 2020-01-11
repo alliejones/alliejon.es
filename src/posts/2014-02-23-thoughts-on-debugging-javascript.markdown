@@ -28,11 +28,11 @@ Clicking on a filename in the Name column will open a detail pane with lots of i
 
 Also, I'm filtering the requests by type in this screenshot, limiting it to only ajax/XHR requests. This helps a lot with finding the actual requests you're interested in, since I don't particularly care about images if I'm trying to figure out why an ajax request is broken.
 
-<img src="/public/img/blog/devtools-post.jpg" alt="Devtools network panel details">
+![Devtools network panel details](../images/devtools-post.jpg)
 
 It took me far too long to realize that if you hover over the filename in the Initiator column, you can view a stack trace that shows where an ajax request came from. So here's a screenshot of that, too, so you don't have to discover it accidentally like I did.
 
-<img src="/public/img/blog/devtools-ajax-trace.jpg" alt="Devtools ajax stack trace">
+![Devtools ajax stack trace](../images/devtools-ajax-trace.jpg)
 
 ### Console
 
@@ -46,7 +46,7 @@ The `debugger` [keyword](https://developers.google.com/chrome-developer-tools/do
 
 When paused in the debugger, the "Continue to here" option can be useful for jumping into callback functions (which can be tricky or tedious to do otherwise). That option is available by right-clicking on the line number you'd like to stop at.
 
-<img src="/public/img/blog/devtools-continue.jpg" alt="Devtools ajax stack trace">
+![Devtools ajax stack trace](../images/devtools-continue.jpg)
 
 `console.trace` can also come in handy. It is similar to `console.log`, but prints a stack trace to the console instead of its passed arguments.
 

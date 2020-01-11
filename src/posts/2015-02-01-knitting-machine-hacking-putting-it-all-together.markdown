@@ -6,7 +6,7 @@ categories: ["knitting machine", "knitting"]
 from_jekyll: true
 ---
 
-_Previous knitting machine hacking posts: [introduction](/blog/2014/12/02/adventures-in-knitting-machine-hacking/), [flashing the Arduino firmware](/blog/2015/01/25/knitting-machine-hacking-flashing-the-arduino-firmware/)_
+_Previous knitting machine hacking posts: <Link to="/blog/2014/12/02/adventures-in-knitting-machine-hacking/">introduction</Link>, <Link to="/blog/2015/01/25/knitting-machine-hacking-flashing-the-arduino-firmware/">flashing the Arduino firmware</Link>_
 
 Thankfully, after the complicated process I went through getting my Arduino set up to work with the AYAB shield, actually connecting everything to the knitting machine was straightforward!
 
@@ -32,11 +32,11 @@ Here it is, video evidence of my newly-hacked knitting machine in action. (Also 
 
 In case you couldn't quite see what I knitted at the end of the video, here's the source image (scaled up significantly; there is one pixel for each stitch so the original is 50 pixels wide):
 
-<img src="/public/img/blog/helloworld-scaled.png" alt="A pixelated 'hello world' in script">
+![A pixelated 'hello world' in script](../images/helloworld-scaled.png)
 
 And the finished product:
 
-<img src="/public/img/blog/helloworld-knit.jpg" alt="'Hello World' knit in white into brown fabric">
+!['Hello World' knit in white into brown fabric](../images/helloworld-knit.jpg)
 
 ## What's next
 

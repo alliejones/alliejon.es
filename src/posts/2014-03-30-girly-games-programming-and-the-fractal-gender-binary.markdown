@@ -10,7 +10,7 @@ Last week [GOG](http://www.gog.com/) had the [Creatures series of video games](h
 
 As a kid and a teenager, I was fortuate enough to have easy access to the family computer (and later my own machine), and I spent many happy hours raising imaginary animals, figuring out how to access the alt.games.creatures newsgroup, downloading game add-ons and trying to build my own.
 
-<img src="/public/img/blog/creatures.jpg" alt="A screenshot of the game Creatures">
+![A screenshot of the game Creatures](../images/creatures.jpg)
 
 I was similarly fascinated with the [Petz games](http://en.wikipedia.org/wiki/Petz), and loved breeding strange hybrid animals and trying my hand at editing the files that defined the appearance of the cats and dogs in the game. (If you want to see some amazing examples of the game being pushed to its limits, [this tumblr](http://petzventures.tumblr.com/) is hilarious.) I learned how to build websites in part so I could share the things I had made.
 

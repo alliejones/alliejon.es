@@ -14,9 +14,7 @@ I never did write a substantial Hacker School reflection post, but I am without 
 
 I'm not one to talk about my personal life on the internet much (at least now that the livejournal chronicling my teenage years is gone, hah), but beyond all of the awesome tech-related things that I accomplished this year, getting to marry my favorite person was still the best.
 
-<a href="http://flic.kr/p/fPLsWK"><img src="http://farm6.staticflickr.com/5342/9729545631_c845f2083d.jpg" style="display:block;margin:0 auto;"></a>
-
-<hr>
+![A photo of my wife Jen and I on our wedding day](../images/wedding.jpg)
 
 I expect 2014 will be a little quieter, and I'm more than content with that, but I have put some thought into things I'd like to do this year. I'm being not-particularly-ambitious in the hopes I'll be more likely to actually accomplish everything.
 
