@@ -7,7 +7,9 @@ tags: ["knitting machine", "knitting"]
 from_jekyll: true
 ---
 
-_Wondering what this is about? See <Link to="/blog/2014/12/02/adventures-in-knitting-machine-hacking/">the introduction</Link> to my knitting machine hacking adventures._
+import { Link } from "gatsby";
+
+_Wondering what this is about? See [the introduction](/blog/2014/12/02/adventures-in-knitting-machine-hacking/) to my knitting machine hacking adventures._
 
 Successfully flashing the firmware on my Arduino so I could use my AYAB shield took a bit of fiddling, especially because I'm running OSX instead of Linux.
 

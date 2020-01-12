@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { TypographyStyle, GoogleFont } from "react-typography";
-import { MDXProvider } from "@mdx-js/react";
 import styled from "@emotion/styled";
 
 import Header from "./header";
@@ -33,7 +32,7 @@ const Layout = ({ children, fullWidth }) => {
   `);
 
   return (
-    <MDXProvider components={{ Link }}>
+    <>
       <Helmet>
         <TypographyStyle typography={typography} />
         <GoogleFont typography={typography} />
@@ -43,7 +42,7 @@ const Layout = ({ children, fullWidth }) => {
         <main>{children}</main>
         <Footer>© {new Date().getFullYear()} Allie Jones</Footer>
       </ContentWrapper>
-    </MDXProvider>
+    </>
   );
 };
 

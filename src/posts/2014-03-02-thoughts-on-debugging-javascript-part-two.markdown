@@ -6,7 +6,9 @@ categories:
 from_jekyll: true
 ---
 
-Following up my <Link to="/blog/2014/02/23/thoughts-on-debugging-javascript/">dev tools lovefest</Link>, I have some more advice on debugging JavaScript, including some approaches I find helpful and editor features worth learning. First, some strategy:
+import { Link } from "gatsby";
+
+Following up my [dev tools lovefest](/blog/2014/02/23/thoughts-on-debugging-javascript/), I have some more advice on debugging JavaScript, including some approaches I find helpful and editor features worth learning. First, some strategy:
 
 ## Develop a theory
 

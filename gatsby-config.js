@@ -3,6 +3,9 @@ module.exports = {
     title: `Allie Jones`,
     description: ``,
     author: `Allie Jones <allie@alliejon.es>`,
+    authorName: `Allie Jones`,
+    authorEmail: `allie@alliejon.es`,
+    siteUrl: "https://alliejon.es/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

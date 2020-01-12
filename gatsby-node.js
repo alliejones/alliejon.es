@@ -1,7 +1,8 @@
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const getPosts = require(`./gatsby-node/get-posts`);
-const createBlogPosts = require(`./gatsby-node/create-pages-blog-posts`);
+const getPosts = require(`./node/get-posts`);
+const createBlogPosts = require(`./node/create-pages-blog-posts`);
+const generateFeed = require(`./node/on-post-build-generate-feed`);
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   const posts = await getPosts({ graphql });
@@ -23,4 +24,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: `blog/${dateSlug}/${titleSlug}`,
     });
   }
+};
+
+exports.onPostBuild = async ({ graphql }) => {
+  await generateFeed({ graphql });
 };

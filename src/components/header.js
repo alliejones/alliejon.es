@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
         <IconLink to="http://www.github.com/alliejones">
           <GithubIcon />
         </IconLink>
-        <IconLink to="#">
+        <IconLink to="/atom.xml">
           <RSSIcon />
         </IconLink>
       </MenuColumn>
