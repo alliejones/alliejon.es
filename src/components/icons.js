@@ -1,6 +1,6 @@
 import React from "react";
 
-export let Twitter = props => (
+export let TwitterIcon = props => (
   <svg
     role="img"
     viewBox="0 0 24 24"
@@ -12,7 +12,7 @@ export let Twitter = props => (
   </svg>
 );
 
-export let Github = props => (
+export let GithubIcon = props => (
   <svg
     role="img"
     viewBox="0 0 24 24"
@@ -24,7 +24,7 @@ export let Github = props => (
   </svg>
 );
 
-export let RSS = props => (
+export let RSSIcon = props => (
   <svg
     role="img"
     viewBox="0 0 24 24"

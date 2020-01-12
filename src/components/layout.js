@@ -1,21 +1,27 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { TypographyStyle, GoogleFont } from "react-typography";
 import { MDXProvider } from "@mdx-js/react";
+import styled from "@emotion/styled";
 
 import Header from "./header";
 import typography from "../utils/typography";
 
-const Layout = ({ children }) => {
+const Footer = styled.footer`
+  text-align: center;
+  font-size: 80%;
+`;
+
+const ContentWrapper = styled.div`
+  margin: 0 auto;
+  max-width: ${({ fullWidth }) => (fullWidth ? "1000px" : "38rem")};
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
+`;
+
+const Layout = ({ children, fullWidth }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,19 +39,10 @@ const Layout = ({ children }) => {
         <GoogleFont typography={typography} />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: "38rem",
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <ContentWrapper fullWidth={fullWidth}>
         <main>{children}</main>
-        <footer style={{ textAlign: "center" }}>
-          <small>© {new Date().getFullYear()} Allie Jones</small>
-        </footer>
-      </div>
+        <Footer>© {new Date().getFullYear()} Allie Jones</Footer>
+      </ContentWrapper>
     </MDXProvider>
   );
 };

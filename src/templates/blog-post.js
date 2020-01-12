@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { css } from "@emotion/core";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import SEO from "../components/seo";
@@ -11,15 +12,25 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Blog" />
       <div>
-        <small style={{ color: "#999", textTransform: "uppercase" }}>
-          {post.frontmatter.date}
-        </small>
+        <PostDate date={post.frontmatter.date} />
         <h1>{post.frontmatter.title}</h1>
         <MDXRenderer>{post.body}</MDXRenderer>
       </div>
     </Layout>
   );
 };
+
+const PostDate = ({ date }) => (
+  <span
+    css={css`
+      color: #999;
+      text-transform: uppercase;
+    `}
+  >
+    {date}
+  </span>
+);
+
 export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {

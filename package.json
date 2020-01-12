@@ -5,10 +5,13 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
     "@mdx-js/mdx": "^1.5.3",
     "@mdx-js/react": "^1.5.3",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-emotion": "^4.1.21",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-mdx": "^1.0.64",
     "gatsby-plugin-offline": "^3.0.27",

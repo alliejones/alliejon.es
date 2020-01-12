@@ -1,7 +1,6 @@
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const getPosts = require(`./gatsby-node/get-posts`);
-const createBlogIndex = require(`./gatsby-node/create-pages-blog-index`);
 const createBlogPosts = require(`./gatsby-node/create-pages-blog-posts`);
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
