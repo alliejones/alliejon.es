@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "https://alliejones.dev/*"
+  to = "https://alliejon.es/:splat"
+  force = true
+
+[[redirects]]
+  from = "https://www.alliejones.dev/*"
+  to = "https://alliejon.es/:splat"
+  force = true
+
+[[redirects]]
+  from = "https://alliejones.netlify.com/*"
+  to = "https://alliejon.es/:splat"
+  force = true

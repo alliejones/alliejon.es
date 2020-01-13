@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+  const { createNodeField, createRedirect } = actions;
 
   if (node.internal.type === `Mdx`) {
     const filename = createFilePath({ node, getNode });

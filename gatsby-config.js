@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: "https://alliejon.es/",
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     {
