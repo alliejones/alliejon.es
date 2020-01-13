@@ -8,7 +8,7 @@ import { TwitterIcon, GithubIcon, RSSIcon } from "./icons";
 const Header = ({ siteTitle }) => (
   <header
     css={css`
-      max-width: 1000;
+      max-width: 1000px;
       margin: 0 auto;
     `}
   >
