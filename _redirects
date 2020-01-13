@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+https://alliejones.dev/* https://alliejon.es/:splat 301!
+
+# Redirect default Netlify subdomain to primary domain
+https://alliejones.netlify.com/* https://alliejon.es/:splat 301!
