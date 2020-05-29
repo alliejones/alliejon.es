@@ -12,8 +12,8 @@ Displaying the source code itself seemed like a good possible solution---maybe n
 
 ## The final product
 
-<pre class="codepen" data-height="300" data-type="result" data-href="vExdA" data-user="alliejones" data-safe="true"><code></code><a href="http://codepen.io/alliejones/pen/vExdA">Check out this Pen!</a></pre>
-<script async src="http://codepen.io/assets/embed/ei.js"></script>
+<pre class="codepen" data-height="300" data-type="result" data-href="vExdA" data-user="alliejones" data-safe="true"><code></code><a href="https://codepen.io/alliejones/pen/vExdA">Check out this Pen!</a></pre>
+<script async src="https://codepen.io/assets/embed/ei.js"></script>
 
 ## Loading the source code
 
@@ -33,10 +33,10 @@ I then realized that Github has an API, and most of my code is already hosted th
 $.getJSON(
   "https://api.github.com/repos/alliejones/makefolio/contents/lib/makefolio/project.rb?callback=?",
   function(response) {
-    var code = Base64.decode(response.data.content)
-    $("div").attr("data-code", code) // see below
+    var code = Base64.decode(response.data.content);
+    $("div").attr("data-code", code); // see below
   }
-)
+);
 ```
 
 The one complication is that the file contents are base-64 encoded in Github's response, so I had to find [a JavaScript base-64 decoding library that supported utf-8](https://github.com/dankogai/js-base64/). (Only Firefox has built in functions to encode/decode base-64 data, and even it [requires a workaround for utf-8](https://developer.mozilla.org/en-US/docs/DOM/window.btoa#Unicode_Strings).)
@@ -50,7 +50,7 @@ By combining the `attr()` [CSS expression](https://developer.mozilla.org/en-US/d
 When `attr()` is applied to a pseudo-element, its context is the pseudo-element's parent element, so the data attribute should be set on the original, content-containing element. The custom data attribute doesn't even need to exist in the HTML---it can be added via jQuery, as I'm doing in my AJAX request callback.
 
 ```js
-$("div").attr("data-code", code)
+$("div").attr("data-code", code);
 ```
 
 (An aside: jQuery includes a [`data`](http://api.jquery.com/data/) function that can be used to _access_ custom data attributes that have been set on HTML elements, but using that function to _set_ custom data doesn't update the DOM, so it won't work in this case.)
