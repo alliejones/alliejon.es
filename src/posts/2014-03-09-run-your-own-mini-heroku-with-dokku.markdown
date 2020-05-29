@@ -16,7 +16,7 @@ However, Digital Ocean offers many different preconfigured server images, and I 
 
 [Dokku](https://github.com/progrium/dokku) is basically a tiny Heroku clone written in bash. It uses Heroku buildpacks to compile projects, so if your application runs on Heroku it should run on Dokku. Once your Dokku server is running, adding and deploying a new project is as easy as doing this:
 
-```
+```bash
 git remote add mywebsite dokku@mywebsite.com:myproject
 git push mywebsite master
 ```

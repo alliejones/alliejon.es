@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
+    "@mapbox/rehype-prism": "^0.4.0",
     "@mdx-js/mdx": "^1.5.3",
     "@mdx-js/react": "^1.5.3",
     "feed": "^4.1.0",
@@ -28,6 +29,7 @@
     "gatsby-remark-smartypants": "^2.1.19",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-sharp": "^2.3.7",
+    "prism-knitting": "https://github.com/alliejones/prism-knitting/",
     "prismjs": "^1.18.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

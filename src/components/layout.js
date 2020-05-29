@@ -8,6 +8,8 @@ import styled from "@emotion/styled";
 import Header from "./header";
 import typography from "../utils/typography";
 
+import "../components/prism-theme.css";
+
 const Footer = styled.footer`
   text-align: center;
   font-size: 80%;

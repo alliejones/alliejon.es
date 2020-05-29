@@ -23,11 +23,11 @@ This would be a great starter configuration for someone new to Grunt, and once y
 
 ```js
 module.exports = function(grunt) {
-  var defaultTasks = ["jshint", "concat", "uglify"] // used for watch as well
+  var defaultTasks = ["jshint", "concat", "uglify"]; // used for watch as well
 
   var files = [
     /* your source files */
-  ]
+  ];
 
   grunt.initConfig({
     jshint: { all: files.concat(["Gruntfile.js"]) },
@@ -50,26 +50,26 @@ module.exports = function(grunt) {
         options: { debounceDelay: 250 },
       },
     },
-  })
+  });
 
-  grunt.loadNpmTasks("grunt-contrib-concat")
-  grunt.loadNpmTasks("grunt-contrib-uglify")
-  grunt.loadNpmTasks("grunt-contrib-watch")
-  grunt.loadNpmTasks("grunt-contrib-jshint")
+  grunt.loadNpmTasks("grunt-contrib-concat");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-contrib-jshint");
 
-  grunt.registerTask("default", defaultTasks)
+  grunt.registerTask("default", defaultTasks);
 
-  var growl = require("growl")
+  var growl = require("growl");
 
-  ;["warn", "fatal"].forEach(function(level) {
+  ["warn", "fatal"].forEach(function(level) {
     grunt.util.hooker.hook(grunt.fail, level, function(opt) {
       growl(opt.name, {
         title: opt.message,
         image: "Console",
-      })
-    })
-  })
-}
+      });
+    });
+  });
+};
 ```
 
 A note: These instructions assume you are using OSX.
@@ -84,7 +84,7 @@ The first time you set up Grunt, you should run `npm -g install grunt-cli`. This
 
 Then, from the root directory of the project you'd like to use Grunt with, run the following to install the packages you need via npm:
 
-```
+```bash
 npm install grunt
 npm install grunt-contrib-concat
 npm install grunt-contrib-uglify
@@ -102,7 +102,7 @@ You should save the Gruntfile to your project's root directory with the filename
 Gruntfiles are just JavaScript, so you can use variables and functions as you normally would. I've set up this Gruntfile so that you only have to specify the locations of your project's JavaScript files once, at the top of the file.
 
 ```js
-var files = ["main.js", "src/**/*.js"]
+var files = ["main.js", "src/**/*.js"];
 ```
 
 This array of file paths will be passed to each Grunt task automatically. Grunt supports glob paths as well (so `src/**/*.js` will include every file with the extension `.js` in any subfolder of `src`).

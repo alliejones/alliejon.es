@@ -1,3 +1,5 @@
+const prismKnitting = require("./config/prism-knitting");
+
 module.exports = {
   siteMetadata: {
     title: `Allie Jones`,
@@ -42,7 +44,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              languageExtensions: [
+                { language: "knitting", definition: prismKnitting },
+              ],
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],

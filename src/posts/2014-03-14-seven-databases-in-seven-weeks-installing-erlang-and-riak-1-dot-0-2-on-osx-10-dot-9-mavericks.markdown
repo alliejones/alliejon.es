@@ -16,14 +16,14 @@ Then I basically followed [Basho's instructions for installing Erlang via kerl](
 
 First install [kerl](https://github.com/spawngrid/kerl), which is basically like virtualenv or rvm for Erlang.
 
-```
+```bash
 curl -O https://raw.github.com/spawngrid/kerl/master/kerl
 chmod a+x kerl
 ```
 
 Then create a `~/.kerlrc` file containing this configuration, so that Erlang will be compiled using gcc instead of clang (the rest of the build settings are as suggested by Basho's docs).
 
-```
+```bash
 KERL_CONFIGURE_OPTIONS="CC=gcc-4.2 --disable-hipe --enable-smp-support
                         --enable-threads --enable-kernel-poll
                         --enable-darwin-64bit"
@@ -31,7 +31,7 @@ KERL_CONFIGURE_OPTIONS="CC=gcc-4.2 --disable-hipe --enable-smp-support
 
 Now you can tell kerl to build, install and activate Erlang. Version R14B03 is the latest one that will work with Riak 1.0.2. (FYI, this version of Riak is not compatible with Erlang R14B04, which I learned the tedious way.)
 
-```
+```bash
 ./kerl build R14B03 r14b03
 ./kerl install r14b03 ~/erlang/r14b03
 . ~/erlang/r14b03/activate
@@ -39,7 +39,7 @@ Now you can tell kerl to build, install and activate Erlang. Version R14B03 is t
 
 With Erlang installed, you're ready to set up Riak. You can [download the Riak 1.0.2 source from Github](https://github.com/basho/riak/archive/riak-1.0.2.zip). Riak won't build correctly with clang either, so you need to specify gcc when compiling again. (I'm not sure that running `make rel` is neccessary here, but that's what I did.)
 
-```
+```bash
 CC=gcc-4.2 make rel
 CC=gcc-4.2 make devrel
 ```
