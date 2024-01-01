@@ -1,6 +1,7 @@
 ---
 title: "Adding syntax highlighting to knitting patterns"
 date: 2014-03-23T12:00:00-04:00
+layout: "@layouts/posts/PrismKnittingLayout.astro"
 ---
 
 A few weeks ago a coworker sent me [Karen Shoop's awesome essay about the similarities between knitting patterns and regular expressions](http://www.cs4fn.org/regularexpressions/knitters.php). While thinking about that, as well the as the knitting chart generator I'm going to make someday, really, it occurred to me that syntax highlighting knitting patterns could be genuinely useful. So I tried it!
@@ -13,7 +14,7 @@ For example, here's the top of a sock I'm working on. The top of the cuff looks 
 
 The knitting pattern abbreviation for the cuff (at the top of the photo) is this:
 
-```text
+```
 k1 p1 until end of round
 ```
 
@@ -21,7 +22,7 @@ That translates to "knit one stitch, then purl one stitch, then knit, then purl 
 
 Instructions for the lower part of the sock are like this:
 
-```text
+```
 k3 p1 until end of round
 ```
 
@@ -33,7 +34,7 @@ For another example, here's a closeup of a hat I made. Same two stitches, but in
 
 A section of that hat's texture (the diagonal stripes) would be transcribed like this:
 
-```text
+```
 k2, p2 to end of round.
 k1, (p2, k2) to 3 sts before end of round, p2, k1
 (p2, k2) to end of round
@@ -52,19 +53,17 @@ I wasn't really interested in writing my own syntax highlighter (yet, anyway), s
 
 Here's the more complicated pattern from above, this time with syntax highlighting:
 
-```knitting
-k2, p2 to end of round.
+<pre><code class="language-knitting">k2, p2 to end of round.
 k1, (p2, k2) to 3 sts before end of round, p2, k1
 (p2, k2) to end of round
 p1, (k2, p2) to 3 sts before end of rnd, k2, p1
-```
+</code></pre>
 
 Much easier to read, I think!
 
 For another, more complicated, example, here's a portion of [this lace tank top pattern](http://www.knitty.com/ISSUEss14/PATTfiftyfifty.php). This pattern includes increasing and decreasing stitches (the abbreviations in teal and yellow), and repeated instructions (in orange).
 
-```knitting
-k2, p2 to end of round.
+<pre><code class="language-knitting">k2, p2 to end of round.
 Rnd 1: K1, *k4, sl1, k1, sl1, k5; rep from * to last st, k1.
 Rnd 2: K1, *k3, k2tog, yo, k1, yo, ssk, k4; rep from * to last st, k1.
 Rnd 3: K1, *(k3, sl1) twice, k4; rep from * to last st, k1.
@@ -76,6 +75,6 @@ Rnd 8: K1, *k2tog, yo, k1, yo, ssk, k1; rep from * to last st, k1.
 Rnd 9: K1, *sl1, k3, k1tbl, sl1, k4, sl1, k1; rep from * to last st, k1.
 Rnd 10: K2tog, *yo, k3, yo, sl1, k2tog, psso; rep from * to last 6 sts, yo, k3, yo, ssk, k1.
 Rnds 11-12: Knit.
-```
+</code></pre>
 
 I've put my (pretty simple) language definition [up on Github](https://github.com/alliejones/prism-knitting), if you're interested in trying it out. I'm sure there is room for improvement in the regexes I've written, though this was definitely a great way to get practice with writing more complex ones than I typically do.
