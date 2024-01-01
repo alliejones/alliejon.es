@@ -1,0 +1,65 @@
+---
+import classNames from "classnames";
+import ThemeToggle from "@components/ThemeToggle";
+import { GithubIcon, LinkedInIcon, RSSIcon } from "./ui/icons";
+
+type Props = Record<string, never>;
+
+const iconLinkClasses =
+  "self-end size-8 p-1 fill-ink-700 dark:fill-ink-200 hover:bg-ink-100 dark:hover:bg-ink-800 transition-colors duration-200 ease-in-out rounded";
+---
+
+<header
+  class="pt-6 md:pt-8 pb-2 mb-6 border-b-2 border-ink-100 dark:border-ink-900"
+>
+  <div class="md:flex items-baseline">
+    <div
+      class="text-ink-700 dark:text-ink-200 text-4xl grow border-b-2 border-ink-100 dark:border-ink-900 md:border-b-0 pb-4 md:pb-0"
+    >
+      <a href="/">Allie Jones</a>
+    </div>
+
+    <div class="flex items-center md:items-baseline pt-2">
+      <nav class="grow">
+        <a
+          href="/blog/"
+          class="hover:bg-ink-100 dark:hover:bg-ink-800 rounded p-1">Writing</a
+        >
+      </nav>
+
+      <div
+        aria-hidden="true"
+        class="hidden md:block mx-4 text-2xl text-ink-200 dark:text-ink-600"
+      >
+        &bull;
+      </div>
+
+      <a
+        href="https://github.com/alliejones"
+        title="Github"
+        class={classNames(iconLinkClasses, "mr-2")}
+        ><GithubIcon class="width-full" />
+        <span class="sr-only">Github</span></a
+      >
+      <a
+        href="https://www.linkedin.com/in/alliejones2/"
+        title="LinkedIn"
+        class={classNames(iconLinkClasses, "mr-2")}
+        ><LinkedInIcon class="width-full" />
+        <span class="sr-only">LinkedIn</span></a
+      >
+      <a href="" title="RSS feed" class={iconLinkClasses}
+        ><RSSIcon class="width-full" /> <span class="sr-only">RSS feed</span></a
+      >
+
+      <div
+        aria-hidden="true"
+        class="mx-4 text-2xl text-ink-200 dark:text-ink-600"
+      >
+        &bull;
+      </div>
+
+      <ThemeToggle client:load class="relative md:-bottom-[2px]" />
+    </div>
+  </div>
+</header>

@@ -1,0 +1,56 @@
+---
+import "@fontsource/inter";
+import Header from "@components/Header.astro";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{pageTitle ? `${pageTitle} | Allie Jones` : "Allie Jones"}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      const theme = (() => {
+        if (window.location) {
+          const params = new URLSearchParams(window.location.search.slice(1));
+          if (params.has("theme")) return params.get("theme");
+        }
+
+        if (
+          typeof localStorage !== undefined &&
+          localStorage.getItem("theme") !== null
+        ) {
+          return localStorage.getItem("theme");
+        }
+
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+
+        return "true";
+      })();
+
+      if (theme === "dark") document.documentElement.classList.add("dark");
+      else document.documentElement.classList.remove("dark");
+    </script>
+  </head>
+
+  <body class="bg-ink-white dark:bg-ink-950 text-ink-950 dark:text-ink-100">
+    <div class="w-full max-w-xl mx-auto px-4 md:px-0">
+      <Header />
+      <main class="prose dark:prose-invert">
+        <slot />
+      </main>
+      <footer>
+        <div
+          class="mt-6 mb-10 text-center text-ink-300 dark:text-ink-500"
+          aria-hidden="true"
+        >
+          ◉
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

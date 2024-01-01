@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import PostList from "@components/PostList.astro";
+
+const posts = await getCollection("posts", (entry) => {
+  return entry.data.archived !== true;
+});
+---
+
+<BaseLayout pageTitle="Writing">
+  <h1>Writing</h1>
+
+  <PostList posts={posts} />
+
+  <p class="mt-14">
+    Older posts that have I think have become less relevant or interesting have
+    been <a href="/blog/archive">archived</a>.
+  </p>
+</BaseLayout>

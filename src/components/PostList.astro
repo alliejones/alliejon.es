@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getPostPathFromSlug } from "@content/posts/_utils";
+
+interface Props {
+  posts: CollectionEntry<"posts">[];
+}
+const { posts } = Astro.props;
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<ul class="list-none pl-0">
+  {
+    posts.map((post) => (
+      <li class="pl-0">
+        <p class="mb-0 text-ink-700 dark:text-ink-400 text-sm">
+          {post.data.date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+        <span class="mt-0 text-xl">
+          <a href={`/blog/${getPostPathFromSlug(post.slug)}`}>
+            {post.data.title}
+          </a>
+        </span>
+      </li>
+    ))
+  }
+</ul>

@@ -9,7 +9,7 @@ Thankfully, after the complicated process I went through getting my Arduino set 
 
 The video from AYAB showing how to open up your knitting machine and connect your Arduino is great and very clear. I had to snip a cable tie to get enough slack in some of the cables and remove a plastic clip from one of the connectors to get it to fit when connected to the shield, but it all worked out fine.
 
-<div style="width:500px;margin: 0 auto 1rem;"><iframe src="//player.vimeo.com/video/99870358" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<iframe src="//player.vimeo.com/video/99870358" class="w-full aspect-video" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Since my knitting machine has a broken card reader anyway, I didn't bother keeping it. I did keep the plastic outer case, but removed the electronics and display, which were just attached with a few screws. The empty space created is big enough to fit the Arduino and shield (though I have to disconnect some cables from the Arduino), which makes it much easier to store everything.
 
@@ -25,7 +25,7 @@ Two things to note about the GUI that I figured out through trial and error: it 
 
 Here it is, video evidence of my newly-hacked knitting machine in action. (Also including a cameo from my cat Abe, who loves all things yarn-y and was very curious about this strange noisy machine.)
 
-<div style="width:100%;height:0;padding-bottom:60%;margin: 0 auto 1rem;position:relative;"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/o-TDBhz8wz8" frameborder="0" allowfullscreen style="position:absolute;top:0;"></iframe></div>
+<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/o-TDBhz8wz8" frameborder="0" allowfullscreen></iframe></div>
 
 In case you couldn't quite see what I knitted at the end of the video, here's the source image (scaled up significantly; there is one pixel for each stitch so the original is 50 pixels wide):
 

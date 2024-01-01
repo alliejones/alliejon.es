@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  children: any;
+  frontmatter: CollectionEntry<"posts">["data"];
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={`${frontmatter.title} | Allie Jones`}>
+  <h1>
+    {frontmatter.title}
+  </h1>
+  <p class="-mt-6 text-ink-700 dark:text-ink-400">
+    {
+      frontmatter.date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    }
+  </p>
+  <slot />
+</BaseLayout>

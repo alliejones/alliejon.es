@@ -1,16 +1,42 @@
 ---
+import PostList from "@components/PostList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 
+const featuredPosts = await getCollection(
+  "posts",
+  (post) => post.data.featured
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <h1 class="sr-only">Allie Jones</h1>
+  <h2 class="sr-only">About me</h2>
+
+  <p>
+    Hi, I'm Allie (they/them). I'm a frontend engineer, currently working on <a
+      href="https://www.etsy.com/">Etsy</a
+    >'s Design Systems team. I've worked on a variety of frontend infrastructure
+    projects during my time there, including rewriting our PHP view layer to
+    support asynchronous tasks,
+    <a href="/blog/2021/11/04/building-javascript-ssr-for-etsy-com"
+      >building Etsy's server-side rendered Javascript service</a
+    >, and implementing cross-platform tokens in our design system. I'm also an
+    alum of the
+    <a href="http://www.recurse.com/">Recurse Center</a> and a former
+    facilitator.
+  </p>
+
+  <p>
+    In my non-work time, I'm a fiber artist, primarily a handweaver and spinner
+    (but also knitter, embroiderer, sewer ...). I live in Brooklyn, NY with my
+    wife and our three cats, surrounded by yarn and probably too many computers.
+  </p>
+
+  <div class="mt-8 border-b-2 border-ink-100 dark:border-ink-900"></div>
+
+  <h2 class="mt-10">Recent writing and speaking</h2>
+  <div class="mb-10">
+    <PostList posts={featuredPosts} />
+  </div>
+</BaseLayout>
