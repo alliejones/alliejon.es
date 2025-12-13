@@ -1,5 +1,6 @@
 ---
 import "@fontsource/inter";
+import "../styles/global.css";
 import Header from "@components/Header.astro";
 const { pageTitle } = Astro.props;
 ---
@@ -40,7 +41,7 @@ const { pageTitle } = Astro.props;
   <body class="bg-ink-white dark:bg-ink-950 text-ink-950 dark:text-ink-100">
     <div class="w-full max-w-xl mx-auto px-4 md:px-0">
       <Header />
-      <main class="prose dark:prose-invert">
+      <main class="prose dark:prose-invert prose-ink">
         <slot />
       </main>
       <footer>

@@ -1,12 +1,12 @@
 import { defineConfig } from "astro/config";
 import preact from "@astrojs/preact";
 import mdx from "@astrojs/mdx";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import { FontaineTransform } from "fontaine";
 
 export default defineConfig({
   site: "https://alliejon.es",
-  integrations: [preact(), mdx(), tailwind()],
+  integrations: [preact(), mdx()],
   legacy: {
     collections: true,
   },
@@ -15,6 +15,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      tailwindcss(),
       FontaineTransform.vite({
         fallbacks: [
           "-apple-system",

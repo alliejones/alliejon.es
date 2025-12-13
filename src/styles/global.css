@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark, .dark *));
+
+@theme {
+  /* Custom color palette */
+  --color-ink-white: #faf9fa;
+  --color-ink-50: #e0e0ff;
+  --color-ink-100: #dcdcf9;
+  --color-ink-200: #c4c3e0;
+  --color-ink-300: #acaac8;
+  --color-ink-400: #9692b0;
+  --color-ink-500: #7f7a98;
+  --color-ink-600: #6a6481;
+  --color-ink-700: #554e6b;
+  --color-ink-800: #413956;
+  --color-ink-900: #2e2541;
+  --color-ink-950: #150f1f;
+
+  --font-family-sans:
+    "Inter", "Inter fallback", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  font-family: var(--font-family-sans);
+}
+
+@utility prose-ink {
+  font-size: 1.1rem;
+  --tw-prose-body: var(--color-ink-950);
+  --tw-prose-headings: var(--color-ink-800);
+  --tw-prose-lead: var(--color-ink-700);
+  --tw-prose-links: var(--color-ink-800);
+  --tw-prose-bold: var(--color-ink-950);
+  --tw-prose-counters: var(--color-ink-500);
+  --tw-prose-bullets: var(--color-ink-400);
+  --tw-prose-hr: var(--color-ink-100);
+  --tw-prose-quotes: var(--color-ink-700);
+  --tw-prose-quote-borders: var(--color-ink-100);
+  --tw-prose-captions: var(--color-ink-700);
+  --tw-prose-kbd: var(--color-ink-900);
+  --tw-prose-kbd-shadows: 30 37 65;
+  --tw-prose-code: var(--color-ink-300);
+  --tw-prose-pre-code: var(--color-ink-800);
+  --tw-prose-pre-bg: var(--color-ink-50);
+  --tw-prose-th-borders: var(--color-ink-200);
+  --tw-prose-td-borders: var(--color-ink-100);
+  --tw-prose-invert-body: var(--color-ink-50);
+  --tw-prose-invert-headings: var(--color-ink-200);
+  --tw-prose-invert-lead: var(--color-ink-200);
+  --tw-prose-invert-links: var(--color-ink-white);
+  --tw-prose-invert-bold: var(--color-ink-50);
+  --tw-prose-invert-counters: var(--color-ink-400);
+  --tw-prose-invert-bullets: var(--color-ink-500);
+  --tw-prose-invert-hr: var(--color-ink-900);
+  --tw-prose-invert-quotes: var(--color-ink-200);
+  --tw-prose-invert-quote-borders: var(--color-ink-900);
+  --tw-prose-invert-captions: var(--color-ink-300);
+  --tw-prose-invert-kbd: var(--color-ink-white);
+  --tw-prose-invert-kbd-shadows: 250 249 250;
+  --tw-prose-invert-code: var(--color-ink-white);
+  --tw-prose-invert-pre-code: var(--color-ink-200);
+  --tw-prose-invert-pre-bg: var(--color-ink-900);
+  --tw-prose-invert-th-borders: var(--color-ink-500);
+  --tw-prose-invert-td-borders: var(--color-ink-700);
+}
